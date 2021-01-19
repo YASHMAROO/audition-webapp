@@ -4,11 +4,11 @@
 		<v-app id="inspire">
 			<v-content>
 				<v-card class="mx-auto overflow-hidden" color="#121a26">
-					<v-app-bar color="#141d2b">
-						<v-btn @click="logout" color="#FF1744">Logout</v-btn>
+					<v-app-bar color="#141d2b" fixed>
+						<v-btn @click="logout" color="#B2EBF2"><span style="color: #000 !important;">Logout</span></v-btn>
 					</v-app-bar>
 				</v-card>
-				<v-container fluid>
+				<v-container fluid class="question_cont">
 					<Normalques />
 					<Test />
 				</v-container>	
@@ -65,9 +65,18 @@ export default {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url("../assets/img/pp.png") no-repeat center center;
 	background-size: cover;
 	background-color: #141d2b;
 	opacity: 0.4;
+}
+
+.question_cont {
+	margin-top: 5rem !important;
+}
+
+@media only screen and (max-width: 576px) {
+	.question_cont {
+		margin-top: 3rem !important;
+	}
 }
 </style>
